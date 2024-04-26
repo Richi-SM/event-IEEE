@@ -1,0 +1,503 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.navbar{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(9, 5, 32);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-logo{
+    height: 50px;
+    width: 100px;
+    padding-left: 20px;
+}
+
+.logo{
+    background-image:url(logo-techx.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-menu{
+    height: 50px;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 50px;
+    font-size: 1rem;
+}
+.menu{
+    text-decoration: none;
+    color: white;
+}
+.menu:hover{
+    box-shadow: 0 0 1rem rgb(255,255,255,0.7);
+}
+
+.hero-section{
+    height: 100vh;
+    background-image: url(pawel-czerwinski-yzbF63GQmhE-unsplash.jpg);
+    background-size: cover;
+    opacity:0.85;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-container{
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.hero-logo{
+    background-image: url(logo-techX-3.png) ;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+    margin-top: 80px;
+}
+.hero-info{
+    height: 100px;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#heroinfo-line1{
+    width: 100%;
+    height: 50%;
+    
+}
+#heroinfo-line2{
+    width: 100%;
+    height: 50%;
+    font-size: 27px;
+    font-weight: 700;
+
+}
+
+.boxes-container{
+    height: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.box{
+    border: 0.3px solid rgb(177, 174, 174);
+    border-radius: 1rem;
+    width: 260px;
+    height: 28%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.box:hover{
+    border: 2px solid black;
+    border-left: 2px solid rgb(128, 118, 118);
+    border-right: 2px solid rgb(128, 118, 118);
+}
+.box-img{
+    width: 20%;
+    height: 25%;
+    background-size: cover;
+    background-position: center;
+    margin-top: 2rem;
+}
+.box h2{
+    width: 100%;
+    height: 25%;
+    font-size: 22px;
+    padding-top: 2rem;
+    font-weight: 700;
+    color: rgb(35, 11, 75);
+    font-family: sans-serif;
+}
+.box p{
+    width: 100%;
+    height: 25%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(68, 61, 61);
+}
+
+#about-section{
+    height: 750px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+}
+.about-container{
+    height: 48%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-textbox{
+    width: 35%;
+    height: 80%;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.about-textbox h2{
+    font-weight: 600;
+    font-size: 1.35rem;
+}
+.about-textbox p{
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: grey;
+    font-family: sans-serif;
+    line-height: 1.6rem;
+}
+.about-textbox button{
+    
+    height: 3rem;
+    width: 7rem;
+    font-size: 1rem;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(199, 28, 156);
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+.about-logo{
+    width: 40%;
+    height: 60%;
+    align-self: center;
+    background-size: cover;
+    background-position: center;
+}
+.ab-logo1{
+    background-image:url(ieee-logo.png);
+}
+.ab-logo2{
+    background-image: url(cs-logo-2.png);
+    width: 45%;
+    height: 50%;
+}
+
+
+#event-tracks{
+    height: 190vh;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    
+}
+.tracks-container{
+    width: 90%;
+    height: 100%;
+}
+.tracks-panel{
+    font-size: 3rem;
+    font-family: Calibri;
+    font-weight: 1000;
+    margin-top: 2rem ;
+    margin-bottom: 2rem;
+}
+.tracks-boxes{
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.track{
+    width: 45%;
+    height: 20%;
+    border-radius: 0.5rem;
+    font-family: sans-serif;
+}
+.track h3{
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.track p{
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    line-height: 150%;
+}
+.long{
+    width: 95%;
+}
+.alt1{
+    background-color: rgb(85, 38, 173);
+    opacity: 85%;
+    color:white;
+}
+.alt2{
+    background-color: #e9ecef;
+}
+
+#event-highlights{
+    height: 400vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+.highlight-container{
+    height: 80%;
+    width: 90%;
+    display: block;
+}
+.highlight-container h2{
+    font-family: sans-serif;
+    font-size: 3vw;
+    margin: 1.5vw;
+}
+.highlights{
+    height: 80%;
+}
+.event-block{
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+.event-dates{
+    background-color: whitesmoke;
+    width: 37%;
+    height: 90%;
+    padding-left:1vw;
+    border-radius: 10px;
+}
+.events{
+    width: 57%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.date-buttons{
+    padding-top:5vw;
+    margin-bottom: 3vw;
+}
+.date-buttons button{
+    background-color: white ;
+    box-shadow: 0 0 1rem rgba(95, 94, 94, 0.7);
+    height: 3.5vw;
+    width: 3.5vw;
+    border-radius: 50%;
+    border: none;
+    margin-right: 5vw;
+    color: black;
+    font-size: 1.7vw;
+    font-weight: 600;
+}
+.date-buttons button:hover{
+    background-color: rgb(65, 9, 65);
+    color: white;
+    height: 4vw;
+    width: 4vw;
+} 
+.date-buttons button:active{
+    background-color: rgb(65, 9, 65);
+    color: white;
+    height: 4vw;
+    width: 4vw;
+}
+.event-dates h3{
+    font-size: 2.7vw;
+    margin-bottom: 1vw;
+}
+.event-dates h4{
+    font-size: 1.7vw;
+    margin-bottom: 3vw;
+    color: rgb(223, 50, 223);
+}
+.event-dates p{
+    font-size: 1.3vw;
+    color: rgb(82, 80, 80);
+}
+.event{
+    background-color: aqua;
+    height: 220px;
+    width: 280px;
+    margin-left: 5px;
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    
+    
+}
+.event img{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+.event h3{
+margin-left: 20px;
+margin-bottom: 5px;
+color: rgb(3, 3, 65);
+}
+.event h4{
+    margin-left: 20px;
+    color: rgb(223, 50, 223);
+}
+.event img:hover{
+    box-shadow: 0 0 1rem rgba(95, 94, 94, 0.7);
+}
+footer{
+    background-color: rgb(9, 5, 32);
+    height: 35vw;
+    width: 100%;
+    display: block;
+}
+.foot-panel1{
+    height: 75%;
+    border-bottom: 1px solid rgb(21, 21, 48);
+    display: flex;
+    justify-content: center;
+}
+.panel1-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.ft-box1{
+    width: 46%;
+    height: 90%;
+}
+.ft-box1 img{
+    height: 80px;
+    width: 140px;
+    padding-top: 2rem;
+}
+.ft-box1 p{
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+
+}
+.ft-box2{
+    width: 17%;
+    height: 90%;
+    
+}
+.ft-box2 h5{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.ft-box3{
+    width: 17%;
+    height: 90%;
+    display: block;
+}
+
+.panel1-container h5{
+    font-size: 1.35rem;
+    margin: 1rem;
+    color: darkmagenta;
+    font-weight: 500;
+    padding-top: 2rem;
+}
+.panel1-container ul{
+    list-style: none;
+    padding-left: 1rem;
+    color: whitesmoke;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 200;
+}
+.foot-panel2{
+    color: whitesmoke;
+    font-size: 0.85rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+
+/* REGISTRATION FORM */
+.to-Home{
+    padding-right: 2rem;
+}
+.reg-form{
+    padding-top: 15vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(9, 5, 32);
+}
+.reg-container{
+    width: 400px;
+    margin: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.reg-form h2 {
+    text-align: center;
+    color: rgb(51, 51, 51);
+}
+
+.reg-form form{
+    margin-top: 20px;
+}
+
+.reg-form label{
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: rgb(76, 175, 80);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(69, 160, 73);
+}
+

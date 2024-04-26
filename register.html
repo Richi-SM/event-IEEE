@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo">
+                <div class="logo"></div>
+            </div>
+            <div class="to-Home">
+                <a class="menu" href="index.html"> < Back to Home</a>
+            </div>
+        </div>
+    </header>
+    <div class="reg-form">
+        <div class="reg-container">
+            <h2>Event Registration Form</h2>
+            <form action="submit_registration.php" method="post">
+            <label for="full_name">Full Name:</label><br>
+            <input type="text" id="full_name" name="full_name" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone:</label><br>
+            <input type="text" id="phone" name="phone" ><br><br>
+
+            <label for="college">College:</label><br>
+            <input type="text" id="college" name="college" ><br><br>
+            
+            <input type="submit" value="Register" href="index.html">
+            </form>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
