@@ -3,7 +3,7 @@
 **Eastern India Techno-Leadership Summit**  
 A responsive event website for the IEEE Tech X Congress, featuring event details, tracks, schedules, and registration information. 
 
-🔗 **[Click here to view the live website](https://yourusername.github.io/your-repo-name/)**
+🔗 **[Click here to view the live website](https://Richi-SM.github.io/event-IEEE/)**
 
 ## Overview
 This project serves as the official landing page for the IEEE Tech X Congress (28th April - 1st May 2024). It provides attendees with comprehensive information about the summit, including technical workshops, leadership sessions, and networking events.
@@ -23,4 +23,4 @@ This project serves as the official landing page for the IEEE Tech X Congress (2
 To view this project on your local machine:
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
+   git clone [https://github.com/Richi-SM/event-IEEE.git](https://github.com/Richi-SM/event-IEEE.git)
