@@ -1,0 +1,705 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 64px; /* keeps anchor targets clear of the fixed navbar */
+    -webkit-text-size-adjust: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar{
+    height: 64px;
+    width: 100%;
+    background-color: rgb(9, 5, 32);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav-logo{
+    height: 50px;
+    width: 130px;
+    padding-left: 20px;
+    flex-shrink: 0;
+}
+
+.logo{
+    background-image:url(logo-techx.png);
+    background-size: contain;      /* show the whole logo, never crop it */
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-menu{
+    height: 50px;
+    flex: 0 1 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 50px;
+    font-size: 1rem;
+}
+.menu{
+    text-decoration: none;
+    color: white;
+}
+.menu:hover{
+    box-shadow: 0 0 1rem rgb(255,255,255,0.7);
+}
+
+/* hamburger button (hidden on desktop) */
+.nav-toggle{
+    display: none;
+    width: 44px;
+    height: 44px;
+    margin-right: 12px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.nav-toggle span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){
+    opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- HERO ---------- */
+.hero-section{
+    min-height: 100vh;
+    min-height: 100svh;
+    background-image: url(pawel-czerwinski-yzbF63GQmhE-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity:0.85;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 64px 1rem 3rem;
+}
+
+.hero-container{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.hero-logo{
+    background-image: url(logo-techX-3.png) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: min(600px, 100%);
+    aspect-ratio: 2 / 1;
+    margin-top: clamp(1rem, 6vw, 80px);
+}
+.hero-info{
+    width: 100%;
+    color: white;
+    font-size: clamp(1rem, 3.4vw, 25px);
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1rem;
+}
+#heroinfo-line1{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+#heroinfo-line2{
+    width: 100%;
+    font-size: clamp(1.1rem, 4vw, 27px);
+    font-weight: 700;
+}
+
+/* ---------- FEATURE BOXES ---------- */
+.boxes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 260px));
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 4rem 1.5rem;
+    background-color: whitesmoke;
+}
+.box{
+    border: 0.3px solid rgb(177, 174, 174);
+    border-radius: 1rem;
+    width: 100%;
+    min-height: 240px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.9rem;
+    background-color: whitesmoke;
+}
+.box:hover{
+    border: 2px solid black;
+    border-left: 2px solid rgb(128, 118, 118);
+    border-right: 2px solid rgb(128, 118, 118);
+    padding: calc(1.5rem - 1.7px) calc(1rem - 1.7px);
+}
+.box-img{
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0.5rem;
+}
+.box h2{
+    width: 100%;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(35, 11, 75);
+    font-family: sans-serif;
+}
+.box p{
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(68, 61, 61);
+}
+
+/* ---------- ABOUT ---------- */
+#about-section{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 1.5rem;
+}
+.about-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-textbox{
+    width: 40%;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about-textbox h2{
+    font-weight: 600;
+    font-size: 1.35rem;
+}
+.about-textbox p{
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: grey;
+    font-family: sans-serif;
+    line-height: 1.6rem;
+}
+.about-textbox button{
+    height: 3rem;
+    width: 7rem;
+    font-size: 1rem;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(199, 28, 156);
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+.about-logo{
+    width: 40%;
+    aspect-ratio: 16 / 9;
+    align-self: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.ab-logo1{
+    background-image:url(ieee-logo.png);
+}
+.ab-logo2{
+    background-image: url(cs-logo-2.png);
+    width: 45%;
+}
+
+/* ---------- EVENT TRACKS ---------- */
+#event-tracks{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.tracks-container{
+    width: 90%;
+    max-width: 1200px;
+}
+.tracks-panel{
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-family: Calibri, sans-serif;
+    font-weight: 700;
+    margin-top: 2rem ;
+    margin-bottom: 2rem;
+}
+.tracks-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.track{
+    width: calc(50% - 0.75rem);
+    border-radius: 0.5rem;
+    font-family: sans-serif;
+}
+.track h3{
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.track p{
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    line-height: 150%;
+}
+.long{
+    width: 100%;
+}
+.alt1{
+    background-color: rgb(85, 38, 173);
+    color:white;
+}
+.alt2{
+    background-color: #e9ecef;
+}
+
+/* ---------- EVENT HIGHLIGHTS ---------- */
+#event-highlights{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 3rem;
+}
+.highlight-container{
+    width: 90%;
+    max-width: 1200px;
+    display: block;
+}
+.highlight-container h2{
+    font-family: sans-serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin: 1.5rem 0;
+}
+.event-block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.event-dates{
+    background-color: whitesmoke;
+    flex: 0 0 37%;
+    padding: clamp(1rem, 2vw, 2rem);
+    border-radius: 10px;
+}
+.events{
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.date-buttons{
+    padding-top:5vw;
+    margin-bottom: 3vw;
+}
+.date-buttons button{
+    background-color: white ;
+    box-shadow: 0 0 1rem rgba(95, 94, 94, 0.7);
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    border: none;
+    margin-right: 1.5rem;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.date-buttons button:hover,
+.date-buttons button:active{
+    background-color: rgb(65, 9, 65);
+    color: white;
+}
+.event-dates h3{
+    font-size: clamp(1.6rem, 3vw, 2.7rem);
+    margin-bottom: 0.5rem;
+}
+.event-dates h4{
+    font-size: clamp(1rem, 1.9vw, 1.7rem);
+    margin-bottom: 1.5rem;
+    color: rgb(223, 50, 223);
+}
+.event-dates p{
+    font-size: clamp(0.9rem, 1.4vw, 1.3rem);
+    color: rgb(82, 80, 80);
+}
+.event{
+    flex: 1 1 220px;
+    max-width: 300px;
+    min-height: 220px;
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding-bottom: 1rem;
+}
+.event img{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    object-fit: cover;
+}
+.event h3{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    color: rgb(3, 3, 65);
+}
+.event h4{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(223, 50, 223);
+}
+.event img:hover{
+    box-shadow: 0 0 1rem rgba(95, 94, 94, 0.7);
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background-color: rgb(9, 5, 32);
+    width: 100%;
+    display: block;
+}
+.foot-panel1{
+    border-bottom: 1px solid rgb(21, 21, 48);
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.panel1-container{
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.ft-box1{
+    flex: 1 1 280px;
+}
+.ft-box1 img{
+    height: 80px;
+    width: 140px;
+    padding-top: 2rem;
+    object-fit: contain;
+}
+.ft-box1 p{
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+.ft-box2{
+    flex: 0 1 200px;
+    color: whitesmoke;
+}
+.ft-box2 h5{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.ft-box3{
+    flex: 0 1 200px;
+    display: block;
+}
+
+.panel1-container h5{
+    font-size: 1.35rem;
+    margin: 1rem;
+    color: darkmagenta;
+    font-weight: 500;
+    padding-top: 0;
+}
+.panel1-container ul{
+    list-style: none;
+    padding-left: 1rem;
+    color: whitesmoke;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 200;
+}
+.foot-panel2{
+    color: whitesmoke;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+
+/* ---------- REGISTRATION FORM ---------- */
+.to-Home{
+    padding-right: 2rem;
+}
+.reg-form{
+    min-height: 100vh;
+    padding-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(9, 5, 32);
+}
+.reg-container{
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem 1rem 3rem;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.reg-form h2 {
+    text-align: center;
+    color: rgb(51, 51, 51);
+}
+
+.reg-form form{
+    margin-top: 20px;
+}
+
+.reg-form label{
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem; /* 16px+ stops iOS zooming into the field */
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: rgb(76, 175, 80);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+/* ---------- SUBMITTED PAGE ---------- */
+.extra{
+    min-height: 100vh;
+    padding: calc(64px + 3rem) 1.5rem 3rem;
+    text-align: center;
+    background-color: rgb(9, 5, 32);
+    color: white;
+}
+.extra h1{
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* Tablet landscape / small laptop */
+@media (max-width: 1024px){
+    .nav-menu{
+        padding-right: 1.5rem;
+        flex-basis: 440px;
+        font-size: 0.95rem;
+    }
+    .event-dates{
+        flex-basis: 100%;
+    }
+    .events{
+        flex-basis: 100%;
+    }
+    .event{
+        max-width: none;
+    }
+}
+
+/* Tablet portrait: hamburger menu, stacked sections */
+@media (max-width: 800px){
+    .nav-toggle{
+        display: flex;
+    }
+    .nav-menu{
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0.5rem 0 1rem;
+        background-color: rgb(9, 5, 32);
+        border-top: 1px solid rgb(21, 21, 48);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+        font-size: 1.05rem;
+        display: none;
+    }
+    .nav-menu.open{
+        display: flex;
+    }
+    .nav-menu > div{
+        width: 100%;
+    }
+    .nav-menu .menu{
+        display: block;
+        padding: 0.9rem 1.5rem;
+    }
+    .nav-menu .menu:hover{
+        box-shadow: none;
+        background-color: rgb(21, 21, 48);
+    }
+
+    /* about: stack text and logos */
+    .about-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-container.c2{
+        flex-direction: column;
+    }
+    .about-textbox,
+    .about-textbox p{
+        width: 100%;
+        text-align: left;
+    }
+    .about-logo,
+    .ab-logo2{
+        width: min(320px, 80%);
+    }
+
+    /* tracks: one column */
+    .track{
+        width: 100%;
+    }
+
+    .foot-panel1{
+        padding: 1.5rem 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px){
+    .nav-logo{
+        width: 112px;
+        height: 44px;
+        padding-left: 12px;
+    }
+    .to-Home{
+        padding-right: 1rem;
+    }
+
+    .hero-section{
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .boxes-container{
+        padding: 2.5rem 1rem;
+        gap: 1.25rem;
+    }
+    .box{
+        min-height: 0;
+    }
+
+    #about-section{
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .track h3{
+        font-size: 1.25rem;
+    }
+
+    .event-block{
+        margin-top: 1.5rem;
+    }
+    .event{
+        flex-basis: 100%;
+        min-height: 0;
+    }
+
+    .ft-box2,
+    .ft-box3{
+        flex-basis: 100%;
+    }
+    .ft-box2 h5,
+    .panel1-container h5{
+        margin-left: 0;
+    }
+    .panel1-container ul{
+        padding-left: 0;
+    }
+
+    .reg-container{
+        margin: 1.5rem 0.75rem 2rem;
+        padding: 16px;
+    }
+}
