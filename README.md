@@ -1,7 +1,7 @@
 # IEEE Tech X Congress
 
 **Eastern India Techno-Leadership Summit**  
-A responsive event website for the IEEE Tech X Congress, featuring event details, tracks, schedules, and registration information. 
+A responsive event website for the IEEE Tech X Congress, featuring event details, tracks, schedules, and registration information.  
 
 🔗 **[Click here to view the live website](https://Richi-SM.github.io/event-IEEE/)**
 
